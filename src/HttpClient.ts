@@ -5,6 +5,7 @@ import { IAsyncDisposable } from "./IAsyncDisposable";
 import { TypeHelper } from "michi-typehelper";
 import { MichiHttpInvalidOperationError } from "./MichiHttpInvalidOperationError";
 import { MichiHttpObjectDisposedError } from "./MichiHttpObjectDisposedError";
+import { NonAbortableSignal } from "./NonAbortableSignal";
 
 /**
  * Provides a class for sending HTTP requests and receiving HTTP responses from a resource identified by a URI.
@@ -58,7 +59,7 @@ export class HttpClient implements IAsyncDisposable {
 	 * @throws MichiHttpInvalidOperationError If the {@link HttpClient} instance has no base address set
 	 *                                        and the {@link HttpRequestMessage} request uri is relative.
 	 * */
-	public async send(message: HttpRequestMessage, abortSignal: AbortSignal) {
+	public async send(message: HttpRequestMessage, abortSignal: AbortSignal = NonAbortableSignal) {
 		TypeHelper.throwIfNotType(message, HttpRequestMessage);
 		TypeHelper.throwIfNotType(abortSignal, AbortSignal);
 		MichiHttpObjectDisposedError.throwIf(this.#_disposed);
