@@ -58,6 +58,7 @@ export class HttpClient implements IAsyncDisposable {
 	 * Send an HTTP request as an asynchronous operation.
 	 * @param message The HTTP request message to send.
 	 * @param abortSignal An optional signal to cancel the request.
+	 * @returns The promise object representing the asynchronous operation.
 	 * @throws MichiHttpInvalidOperationError If the {@link HttpClient} instance has no base address set
 	 *                                        and the {@link HttpRequestMessage} request uri is relative.
 	 * */
