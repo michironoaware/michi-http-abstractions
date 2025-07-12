@@ -12,13 +12,13 @@ A framework-agnostic JavaScript library with HTTP utilities and .NET-inspired ab
 `michi-http-abstractions` offers a structured and extensible approach to working with HTTP
 in JavaScript and TypeScript, inspired by the .NET `HttpClient` architecture.
 It introduces abstractions like `HttpClient`, `HttpRequestMessage`, `HttpContent`,
-and `HttpHandler` to enable clean separation of concerns and reusable HTTP logic.
+and `HttpMessageHandler` to enable clean separation of concerns and reusable HTTP logic.
 
 You can build flexible pipelines by composing HttpHandlers,
 making it easy to add cross-cutting behaviors like logging, retries,
 or authentication in a clean and modular way.
 
-The library also supports custom HttpContent implementations, giving
+The library also supports custom `HttpContent` implementations, giving
 you full control over how request data is serialized, structured, and transmitted.
 
 Built to be framework-agnostic, it runs consistently across Node.js, Deno, browsers,
@@ -79,7 +79,7 @@ const response = await client.send(request);
 response.ensureSuccessStatusCode();
 ```
 
-### Chain multiple HttpHandlers to create more complex pipelines
+### Chain multiple http message handlers to create more complex pipelines
 ```ts
 import {
 	HttpRequestMessage,
