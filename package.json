@@ -12,10 +12,7 @@
 			"types": "./dist/src/index.d.ts"
 		}
 	},
-	"version": "1.0.0-alpha",
-	"publishConfig": {
-		"tag": "alpha"
-	},
+	"version": "0.0.0-semantically-released",
 	"scripts": {
 		"test": "jest --passWithNoTests",
 		"test:coverage": "jest --passWithNoTests --coverage",
