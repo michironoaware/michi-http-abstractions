@@ -1,5 +1,5 @@
 {
-	"name": "project",
+	"name": "michi-http-abstractions",
 	"type": "module",
 	"files": [
 		"dist",
@@ -12,10 +12,7 @@
 			"types": "./dist/src/index.d.ts"
 		}
 	},
-	"version": "1.0.0-alpha",
-	"publishConfig": {
-		"tag": "alpha"
-	},
+	"version": "0.0.0-semantically-released",
 	"scripts": {
 		"test": "jest --passWithNoTests",
 		"test:coverage": "jest --passWithNoTests --coverage",
@@ -50,5 +47,8 @@
 		"typedoc": "^0.28.1",
 		"typedoc-plugin-markdown": "^4.6.2",
 		"typescript": "^5.7.3"
+	},
+	"dependencies": {
+		"michi-typehelper": "^1.0.3"
 	}
 }
