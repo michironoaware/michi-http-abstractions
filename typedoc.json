@@ -1,0 +1,7 @@
+﻿{
+	"$schema": "https://typedoc.org/schema.json",
+	"entryPoints": ["./src/index.ts"],
+	"out": "typedoc-out/src",
+	"plugin": ["typedoc-plugin-markdown"],
+	"useCodeBlocks": true
+}
