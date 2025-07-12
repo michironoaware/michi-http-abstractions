@@ -1,5 +1,5 @@
 {
-	"name": "project",
+	"name": "michi-http-abstractions",
 	"type": "module",
 	"files": [
 		"dist",
